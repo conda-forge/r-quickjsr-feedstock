@@ -1,4 +1,4 @@
-{% set version = '1.0.7' %}
+{% set version = "1.0.9" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,10 +10,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/QuickJSR_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/QuickJSR/QuickJSR_{{ version }}.tar.gz
-  sha256: 3161c243fed64ea215084b44141bea9ee416fa1ef3910aeb78abe55f3d3e9893
+  sha256: 13ecc8939f4936c660629fe5f46ff3392000c282886e338b4c53583e4fa94089
 
 build:
-  merge_build_host: True  # [win]
+  merge_build_host: true  # [win]
   number: 0
   rpaths:
     - lib/R/lib/
@@ -59,9 +59,7 @@ about:
   home: https://github.com/andrjohns/QuickJSR
   doc_url: https://bellard.org/quickjs/
   license: MIT
-  summary: An 'R' interface to the 'QuickJS' portable 'JavaScript' engine. The engine is bundled
-    entirely within the package, requiring no external system dependencies beyond a
-    'C' compiler.
+  summary: An 'R' interface to the 'QuickJS' portable 'JavaScript' engine. The engine is bundled entirely within the package, requiring no external system dependencies beyond a 'C' compiler.
   license_family: MIT
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/MIT
