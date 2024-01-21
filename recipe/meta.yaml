@@ -1,4 +1,4 @@
-{% set version = "1.0.9" %}
+{% set version = "1.1.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/QuickJSR_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/QuickJSR/QuickJSR_{{ version }}.tar.gz
-  sha256: 13ecc8939f4936c660629fe5f46ff3392000c282886e338b4c53583e4fa94089
+  sha256: 7e754a1eb26d98870e486d5b87be37d7fdef5d7a4646be8fbcee46aaf2916fd6
 
 build:
   merge_build_host: true  # [win]
