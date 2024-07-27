@@ -18,7 +18,6 @@ build:
     - lib/
   missing_dso_whitelist:
     - '*/R.dll'
-  skip: true  # [win]
 
 requirements:
   build:
@@ -33,6 +32,7 @@ requirements:
     - {{ compiler('cxx') }}        # [not win]
     - {{ compiler('m2w64_cxx') }}  # [win]
     - {{ posix }}filesystem        # [win]
+    - {{ posix }}grep              # [win]
     - {{ posix }}make
     - {{ posix }}sed               # [win]
     - {{ posix }}coreutils         # [win]
