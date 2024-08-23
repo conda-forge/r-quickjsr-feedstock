@@ -11,7 +11,7 @@ source:
     - {{ cran_mirror }}/src/contrib/Archive/QuickJSR/QuickJSR_{{ version }}.tar.gz
   sha256: 10559d6e84a838ec97acdbc6028a59e2121811d4a20e83c95cdb8fb4ce208fd1
   patches:
-    - Makevars-lrt.patch  # [win]
+    - Makevars-pthread.patch  # [win]
 
 build:
   number: 3
