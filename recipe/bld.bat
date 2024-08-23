@@ -1,4 +1,4 @@
-set "LDFLAGS=%LDFLAGS% -lrt"
+set "LDLIBS=%LDLIBS% -lrt"
 
 "%R%" CMD INSTALL --build . %R_ARGS%
 IF %ERRORLEVEL% NEQ 0 exit /B 1
