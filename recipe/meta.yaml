@@ -10,15 +10,16 @@ source:
     - {{ cran_mirror }}/src/contrib/QuickJSR_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/QuickJSR/QuickJSR_{{ version }}.tar.gz
   sha256: 10559d6e84a838ec97acdbc6028a59e2121811d4a20e83c95cdb8fb4ce208fd1
+  patches:
+    - Makevars-pthread.patch  # [win]
 
 build:
-  number: 2
+  number: 3
   rpaths:
     - lib/R/lib/
     - lib/
   missing_dso_whitelist:
     - '*/R.dll'
-  skip: true  # [win]
 
 requirements:
   build:
@@ -33,6 +34,7 @@ requirements:
     - {{ compiler('cxx') }}        # [not win]
     - {{ compiler('m2w64_cxx') }}  # [win]
     - {{ posix }}filesystem        # [win]
+    - {{ posix }}grep              # [win]
     - {{ posix }}make
     - {{ posix }}sed               # [win]
     - {{ posix }}coreutils         # [win]
