@@ -1,0 +1,23 @@
+From b88441df162dbdc90dae6ddb7dd6e95a36d2d37b Mon Sep 17 00:00:00 2001
+From: Daniel Nachun <daniel.nachun@gmail.com>
+Date: Fri, 30 Jan 2026 15:04:42 -0800
+Subject: [PATCH] Makevars-pthread
+
+---
+ src/Makevars | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/src/Makevars b/src/Makevars
+index bdf2665..8f03135 100644
+--- a/src/Makevars
++++ b/src/Makevars
+@@ -1,5 +1,5 @@
+ PKG_CPPFLAGS = -I"include" -I"quickjs" -D_GNU_SOURCE
+-PKG_LIBS = libquickjs.o
++PKG_LIBS = libquickjs.o -pthread
+ 
+ ifeq ($(OS),Windows_NT)
+ 	DLL := .dll
+-- 
+2.51.0
+

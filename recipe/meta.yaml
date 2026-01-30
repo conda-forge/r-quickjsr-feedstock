@@ -1,4 +1,4 @@
-{% set version = "1.8.1" %}
+{% set version = "1.9.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,9 +9,9 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/QuickJSR_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/QuickJSR/QuickJSR_{{ version }}.tar.gz
-  sha256: dd4cf107016d659991cdbd313908209e3998ea8b093f3632d8b3a84dea435e0f
+  sha256: b81cba773b1c3b3850c3553ac56382125f41ec21afe225e34580ebf2e3bd0b48
   patches:
-    - Makevars-pthread.patch  # [win]
+    - 0001-Makevars-pthread.patch  # [win]
 
 build:
   number: 0
